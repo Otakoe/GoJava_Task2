@@ -7,20 +7,20 @@ public class Task2 {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println(" n");
+        System.out.println("Введите ваше имя");
         name = sc.next();
         do {
-            System.out.println("t ");
-            town = sc.nextLine();
-        }while(town.isBlank());
+            System.out.println("Введите город вашего фактического проживания");
+        }while((town = sc.nextLine()).isBlank());
         do {
-            System.out.println(" ");
+            System.out.println("Введите ваш возраст (от 10 до 99)");
             age = sc.nextInt();
         }
         while(age<10||age>99);
-        System.out.println(" ");
-        hobbie=sc.nextLine();
-        System.out.println(" ");
+        do {
+            System.out.println("Какое у вас хобби");
+            hobbie = sc.nextLine();
+        }while(hobbie.isEmpty());
 
         System.out.println("Выберите вариант вывода введя число от 1 до 3 включительно");
         while (true) {
@@ -53,10 +53,10 @@ public class Task2 {
         System.out.println(town);
 
         System.out.print("Возраст:");
-        razd(40-2,' ');
+        razd(40-8-2,' ');
         System.out.println(age);
 
-        System.out.println("Хобби:");
+        System.out.print("Хобби:");
         razd(40-hobbie.length()-6,' ');
         System.out.println(hobbie);
 
@@ -67,7 +67,7 @@ public class Task2 {
 
     public static void var2(){
         razd(60,'-');
-        System.out.println("\nВариант 2 (тектовый)Ж");
+        System.out.println("\nВариант 2 (тектовый):");
         System.out.println("Человек по имени "+name+" живёт в городе "+town);
         System.out.println("Этому человеку "+age+" лет и любит он заниматься "+hobbie);
         razd (60,'-');
