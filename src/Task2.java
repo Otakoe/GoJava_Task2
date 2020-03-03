@@ -9,6 +9,7 @@ public class Task2 {
         Scanner sc=new Scanner(System.in);
         System.out.println("Введите ваше имя");
         name = sc.next();
+        //Задваивает в дувайле принт. Баг, не знаю почему
         do {
             System.out.println("Введите город вашего фактического проживания");
         }while((town = sc.nextLine()).isBlank());
@@ -17,6 +18,7 @@ public class Task2 {
             age = sc.nextInt();
         }
         while(age<10||age>99);
+        //Задваивает в дувайле принт, без дувайла печатает следующий принт, а сканер считывает потом. Баг, не знаю почему
         do {
             System.out.println("Какое у вас хобби");
             hobbie = sc.nextLine();
