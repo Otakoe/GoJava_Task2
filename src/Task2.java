@@ -2,11 +2,21 @@ import java.util.Scanner;
 
 public class Task2 {
 
-    static String name,surname,town,hobbie;
+    static String name,town,hobbie;
     static int age;
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
+
+        System.out.println(" ");
+        name=sc.next();
+        System.out.println(" ");
+        town =sc.nextLine();
+        System.out.println(" ");
+        age =sc.nextInt();
+        System.out.println(" ");
+        hobbie=sc.nextLine();
+        System.out.println(" ");
 
         System.out.println("Выберите вариант вывода введя число от 1 до 3 включительно");
         while (true) {
@@ -27,6 +37,7 @@ public class Task2 {
     }
 
     public static void var1() {
+        
 
     }
 
