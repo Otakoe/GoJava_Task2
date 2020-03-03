@@ -7,13 +7,17 @@ public class Task2 {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-
-        System.out.println(" ");
-        name=sc.next();
-        System.out.println(" ");
-        town =sc.nextLine();
-        System.out.println(" ");
-        age =sc.nextInt();
+        System.out.println(" n");
+        name = sc.next();
+        do {
+            System.out.println("t ");
+            town = sc.nextLine();
+        }while(town.isBlank());
+        do {
+            System.out.println(" ");
+            age = sc.nextInt();
+        }
+        while(age<10||age>99);
         System.out.println(" ");
         hobbie=sc.nextLine();
         System.out.println(" ");
@@ -37,16 +41,54 @@ public class Task2 {
     }
 
     public static void var1() {
-        
+        razd(40,'-');
+        System.out.println("\nВариант 1 (табличный):");
+        System.out.print("Имя:");
+        //отступ зависит от длины переменной чтобы выровнять по правому краю
+        razd(40-name.length()-4,' ');
+        System.out.println(name);
+
+        System.out.print("Город:");
+        razd(40-town.length()-6,' ');
+        System.out.println(town);
+
+        System.out.print("Возраст:");
+        razd(40-2,' ');
+        System.out.println(age);
+
+        System.out.println("Хобби:");
+        razd(40-hobbie.length()-6,' ');
+        System.out.println(hobbie);
+
+        razd(40,'-');
+        System.out.println();
 
     }
 
     public static void var2(){
-
+        razd(60,'-');
+        System.out.println("\nВариант 2 (тектовый)Ж");
+        System.out.println("Человек по имени "+name+" живёт в городе "+town);
+        System.out.println("Этому человеку "+age+" лет и любит он заниматься "+hobbie);
+        razd (60,'-');
+        System.out.println();
     }
 
     public static void var3(){
-
+        razd(40,'-');
+        System.out.println("\nВариан 3 (иной):");
+        System.out.println(name+" - имя");
+        System.out.println(town+" - город");
+        System.out.println(age+" - возраст");
+        System.out.println(hobbie+" - хобби");
+        razd(40,'-');
+        System.out.println();
     }
 
+    public static void razd(int a,char c)
+    {
+        if(a>0)
+            for(int i=0;i<a;i++)
+                System.out.print(c);
+    }
 }
